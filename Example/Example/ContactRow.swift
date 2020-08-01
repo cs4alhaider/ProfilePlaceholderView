@@ -24,6 +24,12 @@ struct ContactRow: View {
                 .clipShape(Circle())
                 .frame(width: 60, height: 60)
             
+            // OR
+            //
+            // ProfilePlaceholderView(name: contact.name)
+            //     .clipShape(Circle())
+            //     .frame(width: 60, height: 60)
+            
             Text(contact.name)
                 .font(.headline)
         }
