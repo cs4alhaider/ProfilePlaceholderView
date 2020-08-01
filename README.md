@@ -51,6 +51,24 @@ struct ContactRow: View {
 
 ```
 
+or, if you don't want to use any image and you just need a placeholder, then do this:
+```swift
+struct ContactRow: View {
+    let contact: Contact
+    
+    var body: some View {
+        HStack {
+            ProfilePlaceholderView(name: contact.name)
+                .clipShape(Circle())
+                .frame(width: 60, height: 60)
+            
+            Text(contact.name)
+                .font(.headline)
+        }
+    }
+}
+```
+
 Check the **Example** project for more details 
 
 
