@@ -56,13 +56,13 @@ public struct ProfilePlaceholderView: View {
     }
     
     public var body: some View {
-        ZStack {
-            LinearGradient(gradient: Gradient(colors: colors), startPoint: .bottomTrailing, endPoint: .topLeading)
-            GeometryReader { geo in
-                Text(self.placeholderText)
-                    .shadow(color: Color.black.opacity(0.3), radius: 7, x: 0, y: 0)
+        GeometryReader { geo in
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: colors), startPoint: .bottomTrailing, endPoint: .topLeading)
+                Text(placeholderText)
+                    .shadow(color: Color.black.opacity(0.4), radius: 7, x: 0, y: 0)
                     .foregroundColor(.white)
-                    .font(self.font ?? .system(size: geo.size.width / 2.5 - 5, weight: .medium, design: .rounded))
+                    .font(font ?? .system(size: geo.size.width / 2.5 - 5, weight: .medium, design: .rounded))
             }
         }
     }
