@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+#if (arch(arm64) || arch(x86_64))
+
 @available(iOS 13.0, *)
 public extension Image {
     func withProfilePlaceholderView(name: String, backgroundGradientColors: [Color]? = nil, font: Font? = nil) -> some View {
@@ -84,3 +86,5 @@ public extension Color {
                      blue: .random(in: 0...1))
     }
 }
+
+#endif
